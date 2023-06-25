@@ -1,0 +1,178 @@
+{
+  "id": "a167c8d8-58b6-46e5-b620-1fbf0c825199",
+  "version": "2.0",
+  "name": "fautsy.com",
+  "url": "https://fautsy.com/",
+  "tests": [{
+    "id": "c75e3152-ba5f-4319-8a1a-2a1a35b6a5c1",
+    "name": "bot",
+    "commands": [{
+      "id": "e39a60a1-5b19-4953-a6aa-3cb12cb6e4fb",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return 1",
+      "targets": [],
+      "value": "loop"
+    }, {
+      "id": "3dc2afb3-d546-498b-9fbb-1815d084f0a4",
+      "comment": "",
+      "command": "while",
+      "target": "${loop} < 100",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "eb74b8ef-fb1a-4b48-ae7d-79df9f9763aa",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a7432af8-45b0-4a22-bb0d-6b57a2ca5fdf",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c91fdaf1-76ea-46e5-82b9-3afdc472595b",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c81f14d6-5c75-408d-ac37-2e0fe4313c61",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1080x720",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "45ed74bf-2fc4-4392-a8ea-5f9dd11bee3e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "ori"
+    }, {
+      "id": "cfc7334c-6e53-414a-81fa-df2ba6a68c3b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Claim Reward",
+      "targets": [
+        ["linkText=Claim Reward", "linkText"],
+        ["css=.mainbtn", "css:finder"],
+        ["xpath=//form/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,' Claim Reward')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1a1f9e5c-bbf1-46b0-b6dd-6874d9ceec68",
+      "comment": "",
+      "command": "pause",
+      "target": "10000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f330794d-96f3-45db-9f21-870fcdbd288e",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return window.location.href",
+      "targets": [],
+      "value": "url"
+    }, {
+      "id": "f2233de1-9dbe-40d1-86b9-bf627f62239f",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${ori} !== ${url}",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "68bcb8e1-38c1-43e0-b66b-88471abc176b",
+      "comment": "",
+      "command": "do",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "63b9d9c0-f5d1-445d-93ce-e6393b8a75e7",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelector(\".h-captcha > iframe\").getAttribute(\"data-hcaptcha-response\")",
+      "targets": [],
+      "value": "x"
+    }, {
+      "id": "8f0ded05-4f3a-48db-aca1-d3233636dfe8",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${x} === \"\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c6d1f798-0c7a-4a2d-9a1b-a1d71dac08c6",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return document.querySelector(\"#antibotlinks\").getAttribute(\"value\")",
+      "targets": [],
+      "value": "ab"
+    }, {
+      "id": "153037ed-be5c-4f6a-b44f-622f13478a2f",
+      "comment": "",
+      "command": "repeatIf",
+      "target": "${ab} === \"\"",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3f2ac925-f4ee-49c4-a70d-39c262dbd7bf",
+      "comment": "",
+      "command": "pause",
+      "target": "5000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "290a3f64-dd77-4c24-9f5f-13a0b513a747",
+      "comment": "",
+      "command": "click",
+      "target": "xpath=//input[@value='Claim Now']",
+      "targets": [
+        ["css=.popupbtn", "css:finder"],
+        ["xpath=//input[@value='Claim Now']", "xpath:attributes"],
+        ["xpath=//div[@id='ncb']/input", "xpath:idRelative"],
+        ["xpath=//div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9b04ac70-cb9e-4053-b116-ff619e36b626",
+      "comment": "",
+      "command": "pause",
+      "target": "600000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5b14ab71-acae-459b-aa6c-ceaf42a69487",
+      "comment": "",
+      "command": "executeScript",
+      "target": "return ${loop}+1",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "bec56e3e-3ad0-4986-ac03-06066a942b77",
+      "comment": "",
+      "command": "end",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f6682fe8-1c67-4df5-b56a-1afd23db1bf7",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["c75e3152-ba5f-4319-8a1a-2a1a35b6a5c1"]
+  }],
+  "urls": ["https://fautsy.com/", "http://starbits.io/"],
+  "plugins": []
+}
